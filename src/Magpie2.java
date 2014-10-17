@@ -31,23 +31,23 @@ public class Magpie2
     public String getResponse(String statement)
     {
         String response = "";
-        if (statement.contains(" no "))
+        if (statement.trim().contains("no"))
         {
             response = "Why so negative?";
         }
-        else if (statement.contains(" mother ")
-                || statement.contains(" father ")
-                || statement.contains(" sister ")
-                || statement.contains(" brother "))
+        else if (statement.indexOf("mother")>=1
+                || statement.indexOf("father")>=1
+                || statement.indexOf("sister")>=1
+                || statement.indexOf("brother")>=1)
         {
             response = "Tell me more about your family.";
         }
-        else if (statement.contains(" cat ")
-                || statement.contains(" dog "))
+        else if (statement.indexOf("cat")>=1
+                || statement.indexOf("sports")>=1)
         {
             response = "Tell me more about your pets.";
         }
-        else if (statement.contains("Mr. Tanczos"))
+        else if (statement.indexOf("Mr. Tanczos")>=1)
         {
             response = "He sounds like a good teacher.";
         }
