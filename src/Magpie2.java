@@ -93,7 +93,21 @@ public class Magpie2
         }
         else if (whichResponse == 2)
         {
-            return response;
+            response = "Do you really think so?";
         }
+        else if (whichResponse == 3)
+        {
+            response = "You don't say.";
+        }
+        else if (whichResponse == 4)
+        {
+            response = "Do you like Batman?";
+        }
+        else if (whichResponse == 5)
+        {
+            response = "How fascinating!";
+        }
+
+        return response;
     }
 }
